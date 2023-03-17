@@ -1,0 +1,342 @@
+{
+	"info": {
+		"_postman_id": "dd12ee69-0cf8-4b55-aa3c-88ca72e11bbb",
+		"name": "Prueba Practica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26375567"
+	},
+	"item": [
+		{
+			"name": "Vehiculo",
+			"item": [
+				{
+					"name": "Crear Vehiculo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"placa\": \"PGB-1234\",\r\n    \"modelo\" : \"rac-4\",\r\n    \"numeroChasis\": \"123434\",\r\n    \"tipo\": \"suv\",\r\n    \"cilindraje\": 2.0,\r\n    \"avaluo\": 23000,\r\n    \"marca\" : {\r\n        \"id\": 1000\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehiculo/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehiculo",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Vehiculo por Id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Vehiculo por Marca",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Vehiculo por Modelo",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Vehiculo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"placa\": \"PGB-1234\",\r\n    \"modelo\": \"rac-5\",\r\n    \"numeroChasis\": \"123434\",\r\n    \"tipo\": \"suv\",\r\n    \"cilindraje\": 2.0,\r\n    \"avaluo\": 23000,\r\n    \"marca\": {\r\n        \"id\": 1000\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehiculo/actualizar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehiculo",
+								"actualizar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Vehiculo",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cliente Patio",
+			"item": [
+				{
+					"name": "Crear Cliente Patio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cliente\" : {\r\n        \"id\": 1000\r\n    },\r\n    \"patio\": {\r\n        \"id\": 1\r\n    },\r\n    \"fechaAsignacion\": \"2021-03-09\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/clientePatio/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientePatio",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Cliente Patio",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"cliente\" : {\r\n        \"id\": 1000\r\n    },\r\n    \"patio\": {\r\n        \"id\": 1\r\n    },\r\n    \"fechaAsignacion\": \"2021-03-23\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/clientePatio/actualizar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientePatio",
+								"actualizar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Cliente Patio",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Cliente Patio",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/clientePatio/buscar?id=4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientePatio",
+								"buscar"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Patio",
+			"item": [
+				{
+					"name": "Crear Patio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\" : \"patio 1\",\r\n    \"direccion\" : \"Avenita 5 Cra 6\",\r\n    \"telefono\" : \"123444\",\r\n    \"numeroPuntoVenta\": 12333\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/patio/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patio",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Patio por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/patio/buscar?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patio",
+								"buscar"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Patio",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/patio/actualizar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patio",
+								"actualizar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Patio",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/patio/eliminar?id=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patio",
+								"eliminar"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Credito",
+			"item": [
+				{
+					"name": "Solicitar Crédito",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cliente\" : {\r\n        \"id\" : 1000\r\n    },\r\n    \"patio\" :{\r\n        \"id\" : 1\r\n    },\r\n    \"vehiculo\" :{\r\n        \"id\": 1\r\n    },\r\n    \"ejecutivo\": {\r\n        \"id\" : 1000\r\n    },\r\n    \"fechaElaboracion\" : \"2023-06-14\",\r\n    \"mesPlazo\" : 12,\r\n    \"cuotas\": 12,\r\n    \"entrada\": 500000,\r\n    \"observacion\" : \"ninguna\",\r\n    \"estadoSolicitudCredito\" : \"R\"\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/solicitudCredito/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"solicitudCredito",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
